@@ -1,12 +1,45 @@
- // AOS
+ // ===== THEME TOGGLE =====
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+
+    // Check saved theme
+    let currentTheme = localStorage.getItem('theme') || 'light';
+    applyTheme(currentTheme);
+
+    themeToggle.addEventListener('click', function() {
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      applyTheme(newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      currentTheme = theme;
+      
+      if (theme === 'dark') {
+        themeIcon.className = 'fas fa-sun';
+        themeText.textContent = 'Light';
+      } else {
+        themeIcon.className = 'fas fa-moon';
+        themeText.textContent = 'Dark';
+      }
+    }
+
+    // AOS
     AOS.init({ once: true, duration: 800, easing: 'ease-out-cubic' });
 
     // Header scroll
     window.addEventListener('scroll', function() {
       const header = document.getElementById('header');
       const backToTop = document.getElementById('backToTop');
-      if (window.scrollY > 50) { header.classList.add('scrolled'); backToTop.classList.add('visible'); }
-      else { header.classList.remove('scrolled'); backToTop.classList.remove('visible'); }
+      if (window.scrollY > 50) { 
+        header.classList.add('scrolled'); 
+        backToTop.classList.add('visible'); 
+      } else { 
+        header.classList.remove('scrolled'); 
+        backToTop.classList.remove('visible'); 
+      }
     });
 
     // Mobile menu
@@ -49,8 +82,14 @@
       chatBody.scrollTop = chatBody.scrollHeight;
     }
 
-    function showTyping() { typingIndicator.classList.add('active'); chatBody.scrollTop = chatBody.scrollHeight; }
-    function hideTyping() { typingIndicator.classList.remove('active'); }
+    function showTyping() { 
+      typingIndicator.style.display = 'block'; 
+      chatBody.scrollTop = chatBody.scrollHeight; 
+    }
+    
+    function hideTyping() { 
+      typingIndicator.style.display = 'none'; 
+    }
 
     // Knowledge base
     function getBotResponse(input) {
@@ -72,9 +111,6 @@
       }
       if (q.includes('ecommerce') || q.includes('shop')) {
         return "Our Ecommerce Development includes: online store creation, payment gateway integration (Stripe, PayPal), product management, custom shopping solutions, and admin dashboards.";
-      }
-      if (q.includes('mobile app') || q.includes('app development')) {
-        return "We build native Android and iOS applications for businesses. Our mobile apps are designed with modern UI, smooth performance, and full functionality.";
       }
       if (q.includes('shopify')) {
         return "Shopify Development: We set up Shopify stores, create custom themes, customize existing themes, and add advanced functionality to help you sell better.";
@@ -117,42 +153,50 @@
     });
 
     // ===== EMAILJS =====
-    (function() {
-      // 🔧 REPLACE WITH YOUR EMAILJS CREDENTIALS
-      const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
-      const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-      const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+    (function () {
+
+      const EMAILJS_PUBLIC_KEY = "wePKbY_ce076gNED7";
+      const EMAILJS_SERVICE_ID = "service_gmg8doq";
+      const EMAILJS_TEMPLATE_ID = "template_ia0mnym";
+      const EMAILJS_AUTO_REPLY_TEMPLATE_ID = "template_ekzhrlt";
 
       emailjs.init(EMAILJS_PUBLIC_KEY);
 
-      const form = document.getElementById('contactForm');
-      const sendBtn = document.getElementById('sendBtn');
-      const toast = document.getElementById('toast');
-      const toastMessage = document.getElementById('toastMessage');
+      const form = document.getElementById("contactForm");
+      const sendBtn = document.getElementById("sendBtn");
+      const toast = document.getElementById("toast");
+      const toastMessage = document.getElementById("toastMessage");
 
       function showToast(message, isError = false) {
         toastMessage.textContent = message;
-        toast.className = 'toast';
-        if (isError) toast.classList.add('error');
-        toast.classList.add('show');
+        toast.className = "toast";
+        if (isError) {
+          toast.classList.add("error");
+        }
+        toast.classList.add("show");
         clearTimeout(toast._timeout);
-        toast._timeout = setTimeout(() => toast.classList.remove('show'), 5000);
+        toast._timeout = setTimeout(() => {
+          toast.classList.remove("show");
+        }, 5000);
       }
 
-      form.addEventListener('submit', function(e) {
+      form.addEventListener("submit", function (e) {
         e.preventDefault();
-        const name = document.getElementById('userName').value.trim();
-        const email = document.getElementById('userEmail').value.trim();
-        const phone = document.getElementById('userPhone').value.trim();
-        const service = document.getElementById('userService').value;
-        const message = document.getElementById('userMessage').value.trim();
+
+        const name = document.getElementById("userName").value.trim();
+        const email = document.getElementById("userEmail").value.trim();
+        const message = document.getElementById("userMessage").value.trim();
 
         if (!name || !email || !message) {
-          showToast('Please fill in all required fields.', true);
+          showToast("Please fill in all required fields.", true);
           return;
         }
+
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) { showToast('Please enter a valid email.', true); return; }
+        if (!emailRegex.test(email)) {
+          showToast("Please enter a valid email address.", true);
+          return;
+        }
 
         sendBtn.disabled = true;
         sendBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right:10px;"></i>Sending...';
@@ -160,32 +204,25 @@
         const templateParams = {
           from_name: name,
           from_email: email,
-          phone: phone || 'Not provided',
-          service: service || 'Not selected',
           message: message,
-          to_email: 'nextdelofficial@gmail.com'
         };
 
         emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
-          .then(function() {
-            const replyParams = {
-              user_email: email,
-              user_name: name,
-              reply_message: `Hello ${name},\n\nThank you for contacting Next Del.\nWe received your request and our team will contact you soon.\n\nRegards,\nNext Del Team`
-            };
-            return emailjs.send(EMAILJS_SERVICE_ID, 'template_autoreply', replyParams);
+          .then(() => {
+            return emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_AUTO_REPLY_TEMPLATE_ID, templateParams);
           })
-          .then(function() {
-            showToast('✅ Message sent! We\'ll get back to you soon.');
+          .then(() => {
+            showToast("✅ Message sent successfully!");
             form.reset();
           })
-          .catch(function(error) {
-            console.error(error);
-            showToast('❌ Failed to send. Please try again.', true);
+          .catch((error) => {
+            console.error("EmailJS Error:", error);
+            showToast("❌ Failed to send message.", true);
           })
-          .finally(function() {
+          .finally(() => {
             sendBtn.disabled = false;
             sendBtn.innerHTML = '<i class="fas fa-paper-plane" style="margin-right:10px;"></i>Send Message';
           });
       });
+
     })();
