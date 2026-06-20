@@ -13,15 +13,21 @@
     href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <link rel="stylesheet" href="style.css">
 
   <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
 
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+  </script>
 
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js">
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -29,19 +35,19 @@
   <!-- ===== HEADER ===== -->
   <header id="header">
     <div class="container nav-wrapper">
-      <div class="logo">Next <span>Del</span></div>
+      <div class="logo" data-aos="fade-right" data-aos-duration="600">Next <span>Del</span></div>
       <div class="nav-links" id="navLinks">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-aos="fade-down" data-aos-duration="600" data-aos-delay="100">About</a>
+        <a href="#services" data-aos="fade-down" data-aos-duration="600" data-aos-delay="150">Services</a>
+        <a href="#portfolio" data-aos="fade-down" data-aos-duration="600" data-aos-delay="200">Portfolio</a>
+        <a href="#contact" data-aos="fade-down" data-aos-duration="600" data-aos-delay="250">Contact</a>
       </div>
       <div style="display:flex;align-items:center;gap:12px;">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" data-aos="fade-left" data-aos-duration="600" data-aos-delay="100">
           <i class="fas fa-moon" id="themeIcon"></i>
           <span class="icon-text" id="themeText">Dark</span>
         </button>
-        <a href="#contact" class="nav-cta">Let's talk</a>
+        <a href="#contact" class="nav-cta" data-aos="fade-left" data-aos-duration="600" data-aos-delay="150">Let's talk</a>
       </div>
       <div class="hamburger" id="hamburger">
         <span></span>
@@ -49,42 +55,54 @@
         <span></span>
       </div>
     </div>
-  </header>
+  </header><br>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero container" id="home">
-    <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
-      <span class="badge"><i class="fas fa-code" style="margin-right:8px;"></i> Digital product studio</span>
-      <h1>Build Your Digital Future With <span class="highlight">Next Del</span></h1>
-      <p>We create modern websites, ecommerce platforms, and custom software solutions that help businesses grow online.
-      </p>
-      <div class="hero-btns">
-        <a href="#contact" class="btn-primary">Get Started</a>
-        <a href="#contact" class="btn-outline">Contact Us</a>
+  <!-- ===== HERO - FULL VIEWPORT HEIGHT ===== -->
+  <section class="hero" id="home">
+    <div id="bg-canvas-hero"></div>
+    <div class="container hero-container">
+      <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+        <span class="badge"><i class="fas fa-code" style="margin-right:8px;"></i> Digital product studio</span>
+        <h1>Build Your Digital<br>Future With <span class="highlight">Next Del</span></h1>
+        <p>We create modern websites, ecommerce platforms, and custom software solutions that help businesses grow online.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">Get Started</a>
+          <a href="#contact" class="btn-outline" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">Contact Us</a>
+        </div>
+        <div class="hero-stats">
+          <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="500"><span>12+</span> Projects</div>
+          <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="600"><span>100%</span> Client satisfaction</div>
+          <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="700"><span>24/7</span> Support</div>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div><span>12+</span> Projects</div>
-        <div><span>100%</span> Client satisfaction</div>
-        <div><span>24/7</span> Support</div>
+      <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+        <!-- Floating Card: Next Generation Solutions -->
+        <div class="floating-card card-main" data-aos="flip-up" data-aos-duration="800" data-aos-delay="300">
+          <i class="fas fa-rocket"></i>
+          <h3>Next Generation Solutions</h3>
+          <p>Built with cutting-edge technology for maximum performance</p>
+        </div>
+        
+        <!-- Floating Badge: 100% Secure -->
+        <div class="floating-badge badge-top" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
+          <i class="fas fa-check-circle"></i> 100% Secure
+        </div>
+        
+        <!-- Floating Badge: Fast Delivery -->
+        <div class="floating-badge badge-bottom" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="500">
+          <i class="fas fa-bolt"></i> Fast Delivery
+        </div>
       </div>
     </div>
-    <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-      <div class="floating-card">
-        <i class="fas fa-rocket"></i>
-        <h3>Next Generation Solutions</h3>
-        <p>Built with cutting-edge technology for maximum performance</p>
-      </div>
-      <div class="floating-badge" style="top:-20px;right:-20px;">
-        <i class="fas fa-check-circle" style="color:#1a4cff;"></i> 100% Secure
-      </div>
-      <div class="floating-badge" style="bottom:-20px;left:-20px;">
-        <i class="fas fa-bolt" style="color:#1a4cff;"></i> Fast Delivery
-      </div>
+    <div class="scroll-indicator" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+      <span>Scroll</span>
+      <i class="fas fa-chevron-down"></i>
     </div>
   </section>
 
   <!-- ===== ABOUT ===== -->
   <section class="about" id="about">
+    <div id="bg-canvas-about"></div>
     <div class="container">
       <div class="about-grid">
         <div class="about-text" data-aos="fade-right" data-aos-duration="800">
@@ -94,7 +112,7 @@
             ideas into powerful online solutions — from ecommerce to custom software. Our team combines creativity with
             technical excellence to deliver results that drive growth.</p>
           <br>
-          <a href="#contact" class="btn-primary" style="padding:14px 32px;font-size:0.95rem;">Learn More</a>
+          <a href="#contact" class="btn-primary" style="padding:14px 32px;font-size:0.95rem;" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Learn More</a>
         </div>
         <div class="about-image" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
           <i class="fas fa-cubes"></i>
@@ -107,6 +125,7 @@
 
   <!-- ===== SERVICES ===== -->
   <section class="services" id="services">
+    <div id="bg-canvas-services"></div>
     <div class="container">
       <div data-aos="fade-up" data-aos-duration="600">
         <span class="badge">What We Do</span>
@@ -151,6 +170,7 @@
 
   <!-- ===== WHY CHOOSE ===== -->
   <section class="why" id="why">
+    <div id="bg-canvas-why"></div>
     <div class="container">
       <div data-aos="fade-up" data-aos-duration="600">
         <span class="badge" style="background:rgba(255,255,255,0.1);color:#6a8cff;">Why Nex Del</span>
@@ -159,23 +179,23 @@
           results.</p>
       </div>
       <div class="why-grid">
-        <div class="why-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+        <div class="why-item" data-aos="flip-up" data-aos-duration="600" data-aos-delay="100">
           <i class="fas fa-microchip"></i>
           <h4>Modern Technology</h4>
         </div>
-        <div class="why-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+        <div class="why-item" data-aos="flip-up" data-aos-duration="600" data-aos-delay="200">
           <i class="fas fa-pen-ruler"></i>
           <h4>Professional Design</h4>
         </div>
-        <div class="why-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+        <div class="why-item" data-aos="flip-up" data-aos-duration="600" data-aos-delay="300">
           <i class="fas fa-shield-alt"></i>
           <h4>Secure Development</h4>
         </div>
-        <div class="why-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+        <div class="why-item" data-aos="flip-up" data-aos-duration="600" data-aos-delay="400">
           <i class="fas fa-expand"></i>
           <h4>Scalable Solutions</h4>
         </div>
-        <div class="why-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+        <div class="why-item" data-aos="flip-up" data-aos-duration="600" data-aos-delay="500">
           <i class="fas fa-headset"></i>
           <h4>Fast Support</h4>
         </div>
@@ -185,6 +205,7 @@
 
   <!-- ===== PROCESS ===== -->
   <section class="process" id="process">
+    <div id="bg-canvas-process"></div>
     <div class="container">
       <div data-aos="fade-up" data-aos-duration="600">
         <span class="badge">Our Process</span>
@@ -192,7 +213,7 @@
         <p class="section-sub">A transparent, structured approach to building your digital product.</p>
       </div>
       <div class="process-steps">
-        <div class="step" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+        <div class="step" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">
           <span class="num">01</span>
           <i class="fas fa-search icon"></i>
           <h4>Research &amp; Planning</h4>
@@ -207,7 +228,7 @@
           <i class="fas fa-laptop-code icon"></i>
           <h4>Development</h4>
         </div>
-        <div class="step" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+        <div class="step" data-aos="fade-left" data-aos-duration="600" data-aos-delay="400">
           <span class="num">04</span>
           <i class="fas fa-rocket icon"></i>
           <h4>Launch &amp; Support</h4>
@@ -218,6 +239,7 @@
 
   <!-- ===== TECH ===== -->
   <section class="tech" id="tech">
+    <div id="bg-canvas-tech"></div>
     <div class="container">
       <div data-aos="fade-up" data-aos-duration="600">
         <span class="badge">Technology</span>
@@ -225,27 +247,27 @@
         <p class="section-sub">We use the latest tools and frameworks to build high-performance solutions.</p>
       </div>
       <div class="tech-stack">
-        <div class="tech-category" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+        <div class="tech-category" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">
           <h4>Frontend</h4>
           <div class="tech-tags">
-            <span class="tech-tag">React.js</span>
-            <span class="tech-tag">Next.js</span>
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">HTML/CSS</span>
+            <span class="tech-tag" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="150">React.js</span>
+            <span class="tech-tag" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200">Next.js</span>
+            <span class="tech-tag" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="250">JavaScript</span>
+            <span class="tech-tag" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="300">HTML/CSS</span>
           </div>
         </div>
         <div class="tech-category" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
           <h4>Backend</h4>
           <div class="tech-tags">
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">Express.js</span>
-            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="250">Node.js</span>
+            <span class="tech-tag" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="300">Express.js</span>
+            <span class="tech-tag" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="350">MongoDB</span>
           </div>
         </div>
-        <div class="tech-category" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+        <div class="tech-category" data-aos="fade-left" data-aos-duration="600" data-aos-delay="300">
           <h4>CMS</h4>
           <div class="tech-tags">
-            <span class="tech-tag">WordPress</span>
+            <span class="tech-tag" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="350">WordPress</span>
           </div>
         </div>
       </div>
@@ -254,60 +276,53 @@
 
   <!-- ===== PORTFOLIO ===== -->
   <section class="portfolio" id="portfolio">
+    <div id="bg-canvas-portfolio"></div>
     <div class="container">
 
-      <!-- header -->
       <div data-aos="fade-up" data-aos-duration="600">
         <span class="badge">Portfolio</span>
         <h2 class="section-title">Recent Work</h2>
         <p class="section-sub">Check out some of our latest projects.</p>
       </div>
 
-      <!-- 6 project grid (3 cols x 2 rows) -->
       <div class="portfolio-grid">
 
-        <!-- 1 -->
-        <div class="portfolio-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+        <div class="portfolio-item" data-aos="flip-left" data-aos-duration="700" data-aos-delay="100">
           <i class="fas fa-shopping-cart"></i>
           <h4>Ecommerce Platform</h4>
           <p>Full-featured online store with payment integration</p>
           <p style="font-size:0.85rem; color:#64748b; margin-top:0.5rem;">Stripe, PayPal, inventory &amp; order tracking</p>
         </div>
 
-        <!-- 2 -->
-        <div class="portfolio-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+        <div class="portfolio-item" data-aos="flip-left" data-aos-duration="700" data-aos-delay="150">
           <i class="fas fa-school"></i>
           <h4>School Management System</h4>
           <p>Complete administration and student management</p>
           <p style="font-size:0.85rem; color:#64748b; margin-top:0.5rem;">Attendance, grading, parent portal &amp; reports</p>
         </div>
 
-        <!-- 3 -->
-        <div class="portfolio-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+        <div class="portfolio-item" data-aos="flip-left" data-aos-duration="700" data-aos-delay="200">
           <i class="fas fa-chart-pie"></i>
           <h4>Business CRM Dashboard</h4>
           <p>Analytics and customer relationship management</p>
           <p style="font-size:0.85rem; color:#64748b; margin-top:0.5rem;">Lead scoring, pipeline, real-time metrics</p>
         </div>
 
-        <!-- 4 (NEW) -->
-        <div class="portfolio-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="250">
+        <div class="portfolio-item" data-aos="flip-left" data-aos-duration="700" data-aos-delay="250">
           <i class="fas fa-heartbeat"></i>
           <h4>HealthTrack Mobile App</h4>
           <p>Patient monitoring &amp; telemedicine platform</p>
           <p style="font-size:0.85rem; color:#64748b; margin-top:0.5rem;">iOS/Android, HIPAA compliant, video consultations</p>
         </div>
 
-        <!-- 5 (NEW) -->
-        <div class="portfolio-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+        <div class="portfolio-item" data-aos="flip-left" data-aos-duration="700" data-aos-delay="300">
           <i class="fas fa-robot"></i>
           <h4>AI Customer Support Bot</h4>
           <p>Conversational AI with multi-channel deployment</p>
           <p style="font-size:0.85rem; color:#64748b; margin-top:0.5rem;">NLP, Slack/WhatsApp integration, analytics</p>
         </div>
 
-        <!-- 6 (NEW) -->
-        <div class="portfolio-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="350">
+        <div class="portfolio-item" data-aos="flip-left" data-aos-duration="700" data-aos-delay="350">
           <i class="fas fa-wallet"></i>
           <h4>FinTech Dashboard</h4>
           <p>Personal finance &amp; investment tracking suite</p>
@@ -315,14 +330,13 @@
         </div>
 
       </div>
-      <!-- end grid -->
 
     </div>
-    <!-- end container -->
   </section>
 
   <!-- ===== CONTACT ===== -->
   <section class="contact" id="contact">
+    <div id="bg-canvas-contact"></div>
     <div class="container">
       <div data-aos="fade-up" data-aos-duration="600">
         <span class="badge" style="background:rgba(255,255,255,0.1);color:#6a8cff;">Contact</span>
@@ -337,18 +351,18 @@
             <i class="fas fa-envelope"></i> nextdelofficial@gmail.com
           </div>
           <div class="socials">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <!-- <a href="#" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="100"><i class="fab fa-twitter"></i></a> -->
+            <a href="https://www.linkedin.com/in/nextdel-tech-7bb46b418/?isSelfProfile=true" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="150"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/nextdelofficial/" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200"><i class="fab fa-instagram"></i></a>
+            <!-- <a href="" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="250"><i class="fab fa-facebook-f"></i></a> -->
           </div>
         </div>
         <div class="contact-form" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
           <form id="contactForm">
-            <input type="text" id="userName" placeholder="Your Name" required />
-            <input type="email" id="userEmail" placeholder="Email Address" required />
-            <textarea id="userMessage" placeholder="Tell us about your project..." required></textarea>
-            <button type="submit" class="btn-primary" id="sendBtn">
+            <input type="text" id="userName" placeholder="Your Name" required data-aos="fade-up" data-aos-duration="400" data-aos-delay="150" />
+            <input type="email" id="userEmail" placeholder="Email Address" required data-aos="fade-up" data-aos-duration="400" data-aos-delay="200" />
+            <textarea id="userMessage" placeholder="Tell us about your project..." required data-aos="fade-up" data-aos-duration="400" data-aos-delay="250"></textarea>
+            <button type="submit" class="btn-primary" id="sendBtn" data-aos="fade-up" data-aos-duration="400" data-aos-delay="300">
               <i class="fas fa-paper-plane" style="margin-right:10px;"></i>Send Message
             </button>
           </form>
@@ -363,19 +377,15 @@
   </button>
 
   <!-- ===== CHAT BOT ===== -->
-  <!-- Chat Toggle Button -->
   <button id="chatToggle">
     <i class="fas fa-robot"></i>
   </button>
 
-  <!-- WhatsApp Button -->
   <a href="https://wa.me/03092356286" target="_blank" id="whatsappButton">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- Chat Window -->
   <div id="chatWindow">
-    <!-- Chat Header -->
     <div
       style="background: var(--gradient-dark); padding: 20px 24px; color: white; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; transition: background 0.4s ease;">
       <div>
@@ -389,15 +399,12 @@
       </button>
     </div>
 
-    <!-- Chat Body -->
     <div id="chatBody">
-      <!-- Welcome Message -->
       <div class="chat-msg bot">
         👋 Welcome to Nex Del! I'm your AI assistant. Ask me about our services, pricing, or anything else!
         <span class="time">Just now</span>
       </div>
 
-      <!-- Typing Indicator -->
       <div id="typingIndicator"
         style="display:none;padding:10px 16px;background:var(--chat-bot-bg);border-radius:16px;max-width:80%;margin:8px 0;transition:background 0.4s ease;">
         <span
@@ -409,7 +416,6 @@
       </div>
     </div>
 
-    <!-- Quick Actions -->
     <div class="chat-quick-actions">
       <button data-question="What services do you offer?">💼 Services</button>
       <button data-question="How much does a website cost?">💰 Pricing</button>
@@ -417,7 +423,6 @@
       <button data-question="Do you build ecommerce stores?">🛒 Ecommerce</button>
     </div>
 
-    <!-- Chat Input -->
     <div class="chat-input-wrapper">
       <input id="chatInput" type="text" placeholder="Type your message...">
       <button id="chatSend">
@@ -435,16 +440,16 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
-      <div style="font-size:1.2rem;font-weight:700;margin-bottom:10px;">
+      <div style="font-size:1.2rem;font-weight:700;margin-bottom:10px;" data-aos="fade-up" data-aos-duration="600">
         Next Del — <span>Turning Ideas Into Digital Solutions</span>
       </div>
-      <div class="footer-links">
+      <div class="footer-links" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
       </div>
-      <div style="margin-top:20px;font-size:0.9rem;">
+      <div style="margin-top:20px;font-size:0.9rem;" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
         &copy; 2026 Next Del. All rights reserved.
       </div>
     </div>
