@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Next Del</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<link rel="stylesheet" href="protfolio.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo" style="text-decoration:none;">Next <span>Del</span></a>
+      <div class="nav-links" id="navLinks">
+          <a href="index.html" data-aos="fade-down" data-aos-duration="600" data-aos-delay="100">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+          <span class="icon-text" id="themeText">Dark</span>
+        </button>
+        <a href="contact.html" class="nav-cta">Let's talk</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header">
+    <div class="container">
+      <span class="badge">Our Work</span>
+      <h1>Our Portfolio</h1>
+      <p>Check out some of our latest projects and see what we can do for you.</p>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO ===== -->
+  <section class="portfolio-page">
+    <div class="container">
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <i class="fas fa-shopping-cart"></i>
+          <h4>Ecommerce Platform</h4>
+          <p>Full-featured online store with payment integration and inventory management.</p>
+          <div class="tech-tags">
+            <span>Stripe</span>
+            <span>PayPal</span>
+            <span>React</span>
+            <span>Node.js</span>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <i class="fas fa-school"></i>
+          <h4>School Management System</h4>
+          <p>Complete administration and student management platform with parent portal.</p>
+          <div class="tech-tags">
+            <span>Next.js</span>
+            <span>MongoDB</span>
+            <span>Express</span>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <i class="fas fa-chart-pie"></i>
+          <h4>Business CRM Dashboard</h4>
+          <p>Analytics and customer relationship management with real-time metrics.</p>
+          <div class="tech-tags">
+            <span>React</span>
+            <span>D3.js</span>
+            <span>PostgreSQL</span>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <i class="fas fa-heartbeat"></i>
+          <h4>HealthTrack Mobile App</h4>
+          <p>Patient monitoring and telemedicine platform with video consultations.</p>
+          <div class="tech-tags">
+            <span>React Native</span>
+            <span>Firebase</span>
+            <span>WebRTC</span>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <i class="fas fa-robot"></i>
+          <h4>AI Customer Support Bot</h4>
+          <p>Conversational AI with multi-channel deployment and analytics.</p>
+          <div class="tech-tags">
+            <span>Python</span>
+            <span>NLP</span>
+            <span>Slack API</span>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <i class="fas fa-wallet"></i>
+          <h4>FinTech Dashboard</h4>
+          <p>Personal finance and investment tracking suite with real-time stocks.</p>
+          <div class="tech-tags">
+            <span>Angular</span>
+            <span>Django</span>
+            <span>WebSocket</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's discuss your ideas and turn them into reality.</p>
+      <a href="contact.html" class="btn-primary">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div style="font-size:1.2rem;font-weight:700;margin-bottom:10px;">
+        Next Del — <span>Turning Ideas Into Digital Solutions</span>
+      </div>
+      <div class="footer-links">
+          <a href="index.html" data-aos="fade-down" data-aos-duration="600" data-aos-delay="100">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div style="margin-top:20px;font-size:0.9rem;">
+        &copy; 2026 Next Del. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="portfolio.js"></script>
+
+</body>
+</html>
