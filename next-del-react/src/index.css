@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green: #00c853;
+  --color-brand-green-secondary: #00e676;
+  --color-brand-green-light: #69f0ae;
+  --color-brand-green-dark: #00a844;
+
+  --color-bg-primary: #0a0e0a;
+  --color-bg-secondary: #111811;
+  --color-bg-card: #1a221a;
+  --color-bg-card-hover: #243024;
+  --color-bg-section: #060e0a;
+
+  --color-text-primary: #e8f5e8;
+  --color-text-secondary: #94b894;
+  --color-text-light: #648a64;
+
+  --animate-float-card: floatCard 6s ease-in-out infinite;
+  --animate-float-badge: floatBadge 5s ease-in-out infinite;
+  --animate-bounce-down: bounceDown 2s ease-in-out infinite;
+
+  @keyframes floatCard {
+    0%, 100% { transform: translateY(0px) };
+    50% { transform: translateY(-15px) };
+  }
+  @keyframes floatBadge {
+    0%, 100% { transform: translateY(0px) scale(1) };
+    50% { transform: translateY(-10px) scale(1.05) };
+  }
+  @keyframes bounceDown {
+    0%, 100% { transform: translateY(0); opacity: 1; };
+    50% { transform: translateY(8px); opacity: 0.5; };
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans bg-bg-primary text-text-primary transition-colors duration-300;
+  }
+
+  /* Custom Webkit Scrollbars */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-bg-card;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-brand-green-secondary rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-brand-green-dark;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-text-primary to-brand-green-light;
+  }
+
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-green to-brand-green-secondary;
+  }
+}
+
+/* Three.js backgrounds styling */
+.three-bg-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Chatbot typing indicator animation keyframes */
+@keyframes typing {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
