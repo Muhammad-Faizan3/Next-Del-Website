@@ -98,7 +98,7 @@ export default function Contact() {
                 <i className="fab fa-linkedin-in"></i>
               </a>
               <a
-                href="https://www.instagram.com/nextdelofficial/"
+                href="https://www.instagram.com/nextdeltech/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
