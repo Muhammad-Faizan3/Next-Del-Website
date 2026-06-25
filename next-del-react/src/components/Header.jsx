@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
+import Logo from '../assets/logo.png';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -36,9 +37,22 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center relative">
-        {/* Logo */}
-        <Link to="/" className="text-2xl font-black tracking-tight text-text-primary hover:opacity-90 transition-opacity">
-          Next <span className="bg-gradient-to-r from-brand-green to-brand-green-secondary bg-clip-text text-transparent">Del</span>
+        {/* Logo Container */}
+        <Link to="/" className="flex items-center gap-3 group">
+          {/* Logo Image */}
+          <img 
+            src={Logo} 
+            alt="Next Del Logo" 
+            className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+          />
+          
+          {/* Logo Text */}
+          <span className="text-2xl font-black tracking-tight text-text-primary transition-opacity duration-300 group-hover:opacity-90">
+            Next{' '}
+            <span className="bg-gradient-to-r from-brand-green to-brand-green-secondary bg-clip-text text-transparent">
+              Del
+            </span>
+          </span>
         </Link>
 
         {/* Desktop Navigation */}

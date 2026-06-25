@@ -13,8 +13,8 @@ export default function Contact() {
     {
       icon: 'fa-phone',
       label: 'Phone',
-      value: '+92 309 2356286',
-      href: 'tel:+923092356286'
+      value: '+92 304 2582657',
+      href: 'tel:+92 304 2582657'
     },
     {
       icon: 'fa-map-marker-alt',
@@ -30,7 +30,7 @@ export default function Contact() {
       <section className="relative overflow-hidden bg-bg-secondary text-text-primary py-20 text-center">
         <ThreeGlobe
           primaryColor={0x00c853}
-      secondaryColor={0x69f0ae}
+          secondaryColor={0x69f0ae}
           opacity={0.3}
         />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -47,7 +47,7 @@ export default function Contact() {
       {/* ===== CONTACT MAIN ===== */}
       <section className="py-24 bg-bg-secondary">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          
+
           {/* Info Column */}
           <div className="lg:col-span-6 space-y-8">
             <div className="space-y-4">
@@ -107,7 +107,27 @@ export default function Contact() {
                 <i className="fab fa-instagram"></i>
               </a>
               <a
-                href="https://wa.me/03092356286"
+                href="https://www.facebook.com/people/Maf-Del/61590785262042/?fb_profile_edit_entry_point=%257B%2522click_point%2522%253A%2522edit_profile_button%2522%252C%2522feature%2522%253A%2522profile_header%2522%257D&sk=about"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="w-12 h-12 rounded-full border border-white/10 text-text-secondary hover:bg-brand-green hover:text-white flex items-center justify-center text-lg transition-all duration-300 hover:-translate-y-1"
+              >
+                <i className="fab fa-facebook-f"></i>
+              </a>
+
+              {/* TikTok - Green Hover */}
+              <a
+                href="https://www.tiktok.com/@nextdel.tech"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+                className="w-12 h-12 rounded-full border border-white/10 text-text-secondary hover:bg-brand-green hover:text-white flex items-center justify-center text-lg transition-all duration-300 hover:-translate-y-1"
+              >
+                <i className="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="https://wa.me/03042582657"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -115,6 +135,7 @@ export default function Contact() {
               >
                 <i className="fab fa-whatsapp"></i>
               </a>
+
             </div>
           </div>
 

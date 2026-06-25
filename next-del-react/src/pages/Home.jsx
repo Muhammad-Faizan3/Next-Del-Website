@@ -10,25 +10,25 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center bg-dark-bg-primary text-text-primary py-24 " id="home">
         <ThreeBackground
           primaryColor={0x00c853}
-      secondaryColor={0x69f0ae}
-      emissiveColor={0x00a844}
+          secondaryColor={0x69f0ae}
+          emissiveColor={0x00a844}
           opacity={0.3}
         />
-        
+
         <div className="max-w-7xl mx-auto px-6 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 flex flex-col items-start" data-aos="fade-right" data-aos-duration="1000">
             <span className="inline-flex items-center gap-2 bg-brand-green/10 text-brand-green-secondary font-bold text-xs uppercase tracking-widest px-4.5 py-1.5 rounded-full border border-brand-green/15 backdrop-blur-md mb-6">
               <i className="fas fa-code text-sm"></i> Digital product studio
             </span>
-            
+
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-6">
               Build Your Digital<br />Future With <span className="bg-gradient-to-r from-brand-green to-brand-green-secondary bg-clip-text text-transparent">Next Del</span>
             </h1>
-            
+
             <p className="text-[#94b894] text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
               We create modern websites, ecommerce platforms, and custom software solutions that help businesses grow online.
             </p>
-            
+
             <div className="flex flex-wrap gap-4 mb-12">
               <Link
                 to="/contact"
@@ -49,7 +49,7 @@ export default function Home() {
                 Contact Us
               </Link>
             </div>
-            
+
             <div className="grid grid-cols-3 gap-6 md:gap-12 w-full pt-8 border-t border-white/8">
               <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
                 <span className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-brand-green to-brand-green-secondary bg-clip-text text-transparent block">12+</span>
@@ -65,7 +65,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
+
           <div className="lg:col-span-5 relative flex justify-center items-center py-12" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
             {/* Main Floating Card */}
             <div className="bg-bg-secondary dark:bg-dark-bg-card border border-border-light dark:border-border-color shadow-2xl backdrop-blur-2xl rounded-3xl p-10 max-w-sm text-center relative z-10 animate-float-card hover:scale-102 hover:border-brand-green/30 hover:shadow-brand-green/15 duration-300">
@@ -75,12 +75,12 @@ export default function Home() {
                 Built with cutting-edge technology for maximum performance and fluid user experiences
               </p>
             </div>
-            
+
             {/* Floating Top Badge */}
             <div className="absolute top-4 right-4 bg-white/8 border border-white/8 backdrop-blur-lg px-6 py-3 rounded-2xl shadow-xl flex items-center gap-2.5 text-xs font-bold text-white pointer-events-none z-20 animate-float-badge" style={{ animationDelay: '0.5s' }}>
               <i className="fas fa-check-circle text-brand-green-secondary text-sm"></i> 100% Secure
             </div>
-            
+
             {/* Floating Bottom Badge */}
             <div className="absolute bottom-4 left-4 bg-white/8 border border-white/8 backdrop-blur-lg px-6 py-3 rounded-2xl shadow-xl flex items-center gap-2.5 text-xs font-bold text-white pointer-events-none z-20 animate-float-badge" style={{ animationDelay: '1s' }}>
               <i className="fas fa-bolt text-brand-green-secondary text-sm"></i> Fast Delivery
@@ -115,7 +115,7 @@ export default function Home() {
               Learn More
             </Link>
           </div>
-          
+
           <div className="lg:col-span-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
             <div className="bg-gradient-to-br from-[#e8f5e9] to-[#c8e6c9] from-bg-card to-bg-card-hover border border-border-light dark:border-border-color rounded-3xl p-12 text-center ">
               <i className="fas fa-cubes text-5xl text-brand-green animate-float-card mb-6 block"></i>
@@ -145,10 +145,10 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Service 1 */}
-            <div 
+            <div
               className="bg-bg-secondary dark:bg-dark-bg-card border border-border-light dark:border-border-color rounded-3xl p-8 relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:bg-light-bg-card-hover dark:hover:bg-bg-card-hover group"
-              data-aos="fade-up" 
-              data-aos-duration="600" 
+              data-aos="fade-up"
+              data-aos-duration="600"
               data-aos-delay="100"
             >
               <div className="absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r from-brand-green to-brand-green-secondary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
@@ -164,10 +164,10 @@ export default function Home() {
             </div>
 
             {/* Service 2 */}
-            <div 
+            <div
               className="bg-bg-secondary dark:bg-dark-bg-card border border-border-light dark:border-border-color rounded-3xl p-8 relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:bg-light-bg-card-hover dark:hover:bg-bg-card-hover group"
-              data-aos="fade-up" 
-              data-aos-duration="600" 
+              data-aos="fade-up"
+              data-aos-duration="600"
               data-aos-delay="200"
             >
               <div className="absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r from-brand-green to-brand-green-secondary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
@@ -182,10 +182,10 @@ export default function Home() {
             </div>
 
             {/* Service 3 */}
-            <div 
+            <div
               className="bg-bg-secondary dark:bg-dark-bg-card border border-border-light dark:border-border-color rounded-3xl p-8 relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:bg-light-bg-card-hover dark:hover:bg-bg-card-hover group"
-              data-aos="fade-up" 
-              data-aos-duration="600" 
+              data-aos="fade-up"
+              data-aos-duration="600"
               data-aos-delay="300"
             >
               <div className="absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r from-brand-green to-brand-green-secondary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
@@ -225,7 +225,7 @@ export default function Home() {
               { icon: 'fa-expand', title: 'Scalable Solutions' },
               { icon: 'fa-headset', title: 'Fast Support' }
             ].map((item, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-bg-primary dark:bg-dark-bg-card border border-border-light dark:border-border-color backdrop-blur-md rounded-2xl p-6.5 text-center flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:bg-light-bg-card-hover dark:hover:bg-bg-card-hover hover:border-brand-green/30"
                 data-aos="flip-up"
@@ -262,7 +262,7 @@ export default function Home() {
               { num: '03', icon: 'fa-laptop-code', title: 'Development' },
               { num: '04', icon: 'fa-rocket', title: 'Launch & Support' }
             ].map((step, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-bg-primary dark:bg-dark-bg-card border border-border-light dark:border-border-color rounded-3xl p-8 relative flex flex-col items-start "
                 data-aos={index === 0 ? 'fade-right' : index === 3 ? 'fade-left' : 'fade-up'}
@@ -295,7 +295,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Frontend */}
-            <div 
+            <div
               className="bg-bg-secondary dark:bg-dark-bg-card border border-border-light dark:border-border-color rounded-3xl p-8 "
               data-aos="fade-right"
               data-aos-duration="600"
@@ -304,8 +304,8 @@ export default function Home() {
               <h4 className="text-xl font-bold mb-6 text-text-brand-primary dark:text-text-primary">Frontend</h4>
               <div className="flex flex-wrap gap-2.5">
                 {['React.js', 'Next.js', 'JavaScript', 'HTML/CSS'].map((tag, idx) => (
-                  <span 
-                    key={idx} 
+                  <span
+                    key={idx}
                     className="bg-bg-primary dark:bg-dark-bg-primary text-text-brand-secondary dark:text-text-brand-darkSecondary font-semibold text-xs py-2 px-4.5 rounded-full border border-border-light dark:border-border-color cursor-default"
                     data-aos="zoom-in"
                     data-aos-duration="400"
@@ -318,7 +318,7 @@ export default function Home() {
             </div>
 
             {/* Backend */}
-            <div 
+            <div
               className="bg-bg-secondary dark:bg-dark-bg-card border border-border-light dark:border-border-color rounded-3xl p-8 "
               data-aos="fade-up"
               data-aos-duration="600"
@@ -327,8 +327,8 @@ export default function Home() {
               <h4 className="text-xl font-bold mb-6 text-text-brand-primary dark:text-text-primary">Backend</h4>
               <div className="flex flex-wrap gap-2.5">
                 {['Node.js', 'Express.js', 'MongoDB'].map((tag, idx) => (
-                  <span 
-                    key={idx} 
+                  <span
+                    key={idx}
                     className="bg-bg-primary dark:bg-dark-bg-primary text-text-brand-secondary dark:text-text-brand-darkSecondary font-semibold text-xs py-2 px-4.5 rounded-full border border-border-light dark:border-border-color cursor-default"
                     data-aos="zoom-in"
                     data-aos-duration="400"
@@ -341,36 +341,36 @@ export default function Home() {
             </div>
 
             {/* CMS */}
-            <div 
-  className="bg-bg-secondary dark:bg-dark-bg-card border border-border-light dark:border-border-color rounded-3xl p-8 "
-  data-aos="fade-left"
-  data-aos-duration="600"
-  data-aos-delay="300"
->
-  <h4 className="text-xl font-bold mb-6 text-text-brand-primary dark:text-text-primary">
-    CMS
-  </h4>
+            <div
+              className="bg-bg-secondary dark:bg-dark-bg-card border border-border-light dark:border-border-color rounded-3xl p-8 "
+              data-aos="fade-left"
+              data-aos-duration="600"
+              data-aos-delay="300"
+            >
+              <h4 className="text-xl font-bold mb-6 text-text-brand-primary dark:text-text-primary">
+                CMS
+              </h4>
 
-  <div className="flex flex-wrap gap-2.5">
-    {[
-      'WordPress',
-      'Shopify',
-      'Strapi',
-      'Sanity CMS',
-      'Payload CMS'
-    ].map((tag, idx) => (
-      <span 
-        key={idx} 
-        className="bg-bg-primary dark:bg-dark-bg-primary text-text-brand-secondary dark:text-text-brand-darkSecondary font-semibold text-xs py-2 px-4.5 rounded-full border border-border-light dark:border-border-color cursor-default"
-        data-aos="zoom-in"
-        data-aos-duration="400"
-        data-aos-delay={350 + idx * 100}
-      >
-        {tag}
-      </span>
-    ))}
-  </div>
-</div>
+              <div className="flex flex-wrap gap-2.5">
+                {[
+                  'WordPress',
+                  'Shopify',
+                  'Strapi',
+                  'Sanity CMS',
+                  'Payload CMS'
+                ].map((tag, idx) => (
+                  <span
+                    key={idx}
+                    className="bg-bg-primary dark:bg-dark-bg-primary text-text-brand-secondary dark:text-text-brand-darkSecondary font-semibold text-xs py-2 px-4.5 rounded-full border border-border-light dark:border-border-color cursor-default"
+                    data-aos="zoom-in"
+                    data-aos-duration="400"
+                    data-aos-delay={350 + idx * 100}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -396,7 +396,7 @@ export default function Home() {
               { icon: 'fa-school', title: 'School Management System', desc: 'Complete administration and student management', tech: 'Attendance, grading, parent portal & reports' },
               { icon: 'fa-chart-pie', title: 'Business CRM Dashboard', desc: 'Analytics and customer relationship management', tech: 'Lead scoring, pipeline, real-time metrics' }
             ].map((item, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="bg-bg-primary dark:bg-dark-bg-card border border-border-light dark:border-border-color rounded-3xl p-8 text-center flex flex-col items-center justify-center transition-all duration-300 hover:scale-102 hover:border-brand-green/30"
                 data-aos="flip-left"
@@ -451,12 +451,12 @@ export default function Home() {
                   <span className="text-base font-bold text-text-brand-primary dark:text-text-primary block mt-1">nextdelofficial@gmail.com</span>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4 mt-6">
-                <a 
-                  href="https://www.linkedin.com/in/nextdel-tech-7bb46b418/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://www.linkedin.com/in/nextdel-tech-7bb46b418/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="LinkedIn"
                   className="w-12 h-12 rounded-full border border-border-light dark:border-border-color text-text-brand-secondary dark:text-text-brand-darkSecondary hover:bg-brand-green hover:text-white dark:hover:bg-brand-green dark:hover:text-white flex items-center justify-center text-lg transition-all duration-300 hover:-translate-y-1"
                   data-aos="zoom-in"
@@ -465,10 +465,10 @@ export default function Home() {
                 >
                   <i className="fab fa-linkedin-in"></i>
                 </a>
-                <a 
-                  href="https://www.instagram.com/nextdeltech/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://www.instagram.com/nextdeltech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Instagram"
                   className="w-12 h-12 rounded-full border border-border-light dark:border-border-color text-text-brand-secondary dark:text-text-brand-darkSecondary hover:bg-brand-green hover:text-white dark:hover:bg-brand-green dark:hover:text-white flex items-center justify-center text-lg transition-all duration-300 hover:-translate-y-1"
                   data-aos="zoom-in"
@@ -477,6 +477,43 @@ export default function Home() {
                 >
                   <i className="fab fa-instagram"></i>
                 </a>
+                <a
+                  href="https://www.tiktok.com/@nextdel.tech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="TikTok"
+                  className="w-12 h-12 rounded-full border border-border-light dark:border-border-color text-text-brand-secondary dark:text-text-brand-darkSecondary hover:bg-brand-green hover:text-white dark:hover:bg-brand-green dark:hover:text-white flex items-center justify-center text-lg transition-all duration-300 hover:-translate-y-1"
+                  data-aos="zoom-in"
+                  data-aos-duration="400"
+                  data-aos-delay="250"
+                >
+                  <i className="fab fa-tiktok"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/people/Maf-Del/61590785262042/?fb_profile_edit_entry_point=%257B%2522click_point%2522%253A%2522edit_profile_button%2522%252C%2522feature%2522%253A%2522profile_header%2522%257D&sk=about"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="w-12 h-12 rounded-full border border-border-light dark:border-border-color text-text-brand-secondary dark:text-text-brand-darkSecondary hover:bg-brand-green hover:text-white dark:hover:bg-brand-green dark:hover:text-white flex items-center justify-center text-lg transition-all duration-300 hover:-translate-y-1"
+                  data-aos="zoom-in"
+                  data-aos-duration="400"
+                  data-aos-delay="200"
+                >
+                  <i className="fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="https://wa.me/03042582657"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                  className="w-12 h-12 rounded-full border border-border-light dark:border-border-color text-text-brand-secondary dark:text-text-brand-darkSecondary hover:bg-brand-green hover:text-white dark:hover:bg-brand-green dark:hover:text-white flex items-center justify-center text-lg transition-all duration-300 hover:-translate-y-1"
+                  data-aos="zoom-in"
+                  data-aos-duration="400"
+                  data-aos-delay="250"
+                >
+                  <i className="fab fa-whatsapp"></i>
+                </a>
+
               </div>
             </div>
 
